@@ -1,3 +1,4 @@
+using CrossCuttingLayer;
 using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,10 +27,10 @@ namespace Microservice.TodoApp.Publisher
                 x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(config =>
                 {
                     config.UseHealthCheck(provider);
-                    config.Host(new Uri("rabbitmq://localhost"), h =>
+                    config.Host(new Uri(RabbitMqConsts.RabbitMqRootUri), h =>
                     {
-                        h.Username("guest");
-                        h.Password("guest");
+                        h.Username(RabbitMqConsts.UserName);
+                        h.Password(RabbitMqConsts.Password);
                     });
                 }));
             });

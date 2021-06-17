@@ -17,13 +17,13 @@ namespace Microservice.TodoApp.Publisher.Controllers
             _bus = bus;
         }
         [HttpPost]
-        public async Task<IActionResult> CreateTicket(Todo ticket)
+        public async Task<IActionResult> CreateTicket(Todo todoModel)
         {
-            if (ticket != null)
+            if (todoModel != null)
             {
-                Uri uri = new Uri("rabbitmq://localhost/todoQueue");
+                Uri uri = new Uri(RabbitMqConsts.RabbitMqUri);
                 var endPoint = await _bus.GetSendEndpoint(uri);
-                await endPoint.Send(ticket);
+                await endPoint.Send(todoModel);
                 return Ok();
             }
             return BadRequest();

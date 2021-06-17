@@ -1,3 +1,4 @@
+using CrossCuttingLayer;
 using GreenPipes;
 using MassTransit;
 using Microsoft.AspNetCore.Builder;
@@ -27,10 +28,10 @@ namespace Microservice.TodoApp.Consumers
                 x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(cfg =>
                 {
                     cfg.UseHealthCheck(provider);
-                    cfg.Host(new Uri("rabbitmq://localhost"), h =>
+                    cfg.Host(new Uri(RabbitMqConsts.RabbitMqRootUri), h =>
                     {
-                        h.Username("guest");
-                        h.Password("guest");
+                        h.Username(RabbitMqConsts.UserName);
+                        h.Password(RabbitMqConsts.Password);
                     });
                     cfg.ReceiveEndpoint("todoQueue", ep =>
                     {
