@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCuttingLayer", "src\CrossCuttingLayer\CrossCuttingLayer.csproj", "{386BE51F-BD00-44F5-B896-BD2A5C64EE69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.TodoApp.Consumers", "src\Microservice.TodoApp.Consumers\Microservice.TodoApp.Consumers.csproj", "{7A0617BC-EFA5-4560-A1B4-4D7DB1CAAAD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.TodoApp.Consumers", "src\Microservice.TodoApp.Consumers\Microservice.TodoApp.Consumers.csproj", "{7A0617BC-EFA5-4560-A1B4-4D7DB1CAAAD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.TodoApp.Publisher", "src\Microservice.TodoApp.Publisher\Microservice.TodoApp.Publisher.csproj", "{F3B1CFA9-0BAB-4C2A-B219-8AF5A7E49FF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.TodoApp.Publisher", "src\Microservice.TodoApp.Publisher\Microservice.TodoApp.Publisher.csproj", "{F3B1CFA9-0BAB-4C2A-B219-8AF5A7E49FF4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.TodoApp.Notification", "src\Microservice.TodoApp.Notification\Microservice.TodoApp.Notification.csproj", "{81A01B6E-231F-414F-BDA2-6A74750897FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{F3B1CFA9-0BAB-4C2A-B219-8AF5A7E49FF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3B1CFA9-0BAB-4C2A-B219-8AF5A7E49FF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3B1CFA9-0BAB-4C2A-B219-8AF5A7E49FF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81A01B6E-231F-414F-BDA2-6A74750897FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81A01B6E-231F-414F-BDA2-6A74750897FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81A01B6E-231F-414F-BDA2-6A74750897FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81A01B6E-231F-414F-BDA2-6A74750897FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

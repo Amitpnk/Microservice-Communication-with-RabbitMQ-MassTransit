@@ -26,7 +26,6 @@ namespace Microservice.TodoApp.Publisher
             {
                 x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(config =>
                 {
-                    config.UseHealthCheck(provider);
                     config.Host(new Uri(RabbitMqConsts.RabbitMqRootUri), h =>
                     {
                         h.Username(RabbitMqConsts.UserName);
