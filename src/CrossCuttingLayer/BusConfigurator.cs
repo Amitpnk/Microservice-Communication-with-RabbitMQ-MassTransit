@@ -1,10 +1,6 @@
 ﻿using MassTransit;
 using MassTransit.RabbitMqTransport;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CrossCuttingLayer
 {
@@ -14,15 +10,15 @@ namespace CrossCuttingLayer
         {
             return Bus.Factory.CreateUsingRabbitMq(cfg =>
             {
-             cfg.Host(new Uri(RabbitMqConsts.RabbitMqRootUri), h =>
-                {
-                    h.Username(RabbitMqConsts.UserName);
-                    h.Password(RabbitMqConsts.Password);
-                });
-                
+                cfg.Host(new Uri(RabbitMqConsts.RabbitMqRootUri), h =>
+                   {
+                       h.Username(RabbitMqConsts.UserName);
+                       h.Password(RabbitMqConsts.Password);
+                   });
+
             });
         }
     }
 
 }
- 
+
