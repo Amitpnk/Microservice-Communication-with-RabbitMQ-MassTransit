@@ -19,7 +19,7 @@ namespace Microservice.TodoApp.Publisher.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateTicket(Todo todoModel)
         {
-            if (todoModel != null)
+            if (todoModel is not null)
             {
                 Uri uri = new Uri(RabbitMqConsts.RabbitMqUri);
                 var endPoint = await _bus.GetSendEndpoint(uri);
